@@ -1,0 +1,62 @@
+# If the command should be enabled
+enabled: true
+
+command: "example test"
+alias:
+  - "example"
+  - "test"
+
+arguments:
+  - id: victim
+    args:
+      type: selector # like minecraft command @e, @a, @p, @r, playername, type, distance,...
+
+  - id: test2
+    args:
+      type: list
+      list:
+        - "a"
+        - "b"
+        - "c"
+
+  - id: "test3"
+    args:
+      type: integer # suggest 1,10,100,1000,10000,100000
+
+  - id: "test3"
+    args:
+      type: location # suggest like default minecraft command
+
+  - id: "test"
+    args:
+      type: string # If not the last argument, only one word
+
+    # default to string
+
+
+
+# Read https://plugins.auxilor.io/effects/configuring-an-effect
+# The effects for the command
+effects:
+  - id: give_money
+    args:
+      amount: "100"
+
+
+# Read https://plugins.auxilor.io/effects/configuring-a-condition
+# The conditions for the command to work
+conditions: [ ]
+
+# NEW CONDITION:
+#  - id: has_argument
+#    args:
+#      argument: "victim"
+
+# NEW PLACEHOLDER:
+# - %args_<args>%
+
+# NEW MUTATOR:
+#  - id: player_as_<args>
+#  - id: text_to_<args>
+#  - id: location_to_<args>
+#  - id: value_to_<args>

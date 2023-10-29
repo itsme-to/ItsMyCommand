@@ -1,0 +1,10 @@
+name: ${pluginName}
+version: ${version}
+main: ru.oftendev.itsmycommand.ItsMyCommand
+author: _OfTeN_
+api-version: 1.17
+depend:
+    - eco
+commands:
+    itsmycommand:
+        aliases: [ sp ]
